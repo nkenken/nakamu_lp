@@ -1,85 +1,102 @@
 import React from "react";
 
-
 // スマホ優先のイベント集客用ランディングページ（1ファイルReactコンポーネント）
-// 要件:
-// - Tailwind CSS 前提（プロジェクトに導入してください）
-// - 画像は /assets 以下に配置する想定（必要なら画像パスを差し替えてください）
-
+// Tailwind CSS 前提（プロジェクトに導入してください）
 
 export default function LocalFoodFestivalLP() {
-return (
-<div className="min-h-screen bg-cream-50 text-gray-900 antialiased">
-{/* ヒーロー */}
-<header className="pt-8 px-5 pb-6 bg-gradient-to-b from-yellow-50 to-white">
-<div className="max-w-md mx-auto">
-<div className="rounded-xl overflow-hidden shadow-md bg-white">
-<img
-src="/assets/festival-hero.jpg"
-alt="地域飲食店合同祭り"
-className="w-full h-44 object-cover"
-/>
-<div className="p-4">
-<h1 className="text-2xl font-bold text-amber-700">地域飲食店 合同祭り</h1>
-<p className="mt-2 text-sm text-gray-700">10月10日（土） 12:00〜18:00 • ○○公園</p>
+  return (
+    <div className="min-h-screen bg-amber-50 text-gray-900 antialiased">
+      {/* ヒーロー */}
+      <header className="pt-8 px-5 pb-6 bg-gradient-to-b from-yellow-50 to-white">
+        <div className="max-w-md mx-auto">
+          <div className="rounded-xl overflow-hidden shadow-md bg-white">
+            <img
+              src="./assets/festival-hero.jpg"
+              alt="地域飲食店合同祭り"
+              className="w-full h-44 object-cover"
+            />
+            <div className="p-4">
+              <h1 className="text-2xl font-bold text-amber-700">
+                地域飲食店 合同祭り
+              </h1>
+              <p className="mt-2 text-sm text-gray-700">
+                10月10日（土） 12:00〜18:00 • ○○公園
+              </p>
 
+              <div className="mt-4">
+                <a
+                  href="#apply"
+                  className="block text-center bg-amber-600 text-white font-semibold py-3 rounded-lg shadow-md"
+                  aria-label="申し込みはこちら"
+                >
+                  申し込みはこちら
+                </a>
+              </div>
 
-<div className="mt-4">
-<a
-href="#apply"
-className="block text-center bg-amber-600 text-white font-semibold py-3 rounded-lg shadow-md"
-aria-label="申し込みはこちら"
->
-申し込みはこちら
-</a>
-</div>
+              <p className="mt-3 text-xs text-gray-500">
+                入場無料 / 雨天決行（小雨の場合）
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
 
+      {/* メインコンテンツ */}
+      <main className="px-5 py-6 max-w-md mx-auto space-y-6">
+        {/* 概要 */}
+        <section className="bg-white rounded-xl p-4 shadow-sm">
+          <h2 className="text-lg font-semibold text-amber-700">イベント概要</h2>
+          <p className="mt-2 text-sm text-gray-700 leading-relaxed">
+            地域の飲食店が集まり、屋台・テイクアウト・限定メニューなどを楽しめるお祭りです。
+            家族連れ・友達同士で気軽に回れる内容で、ライブや抽選会などのステージイベントも開催。
+          </p>
+        </section>
 
-<p className="mt-3 text-xs text-gray-500">入場無料 / 雨天決行（小雨の場合）</p>
-</div>
-</div>
-</div>
-</header>
+        {/* タイムテーブル */}
+        <section className="bg-white rounded-xl p-4 shadow-sm">
+          <h3 className="text-lg font-semibold text-amber-700">タイムテーブル</h3>
+          <ul className="mt-3 space-y-3 text-sm text-gray-700">
+            <li className="flex justify-between">
+              <span>12:00</span>
+              <span>開会式</span>
+            </li>
+            <li className="flex justify-between">
+              <span>14:00</span>
+              <span>ステージイベント（ライブ）</span>
+            </li>
+            <li className="flex justify-between">
+              <span>16:00</span>
+              <span>抽選会（豪華賞品あり）</span>
+            </li>
+          </ul>
+        </section>
 
-
-{/* メインコンテンツ */}
-<main className="px-5 py-6 max-w-md mx-auto space-y-6">
-{/* 概要 */}
-<section className="bg-white rounded-xl p-4 shadow-sm">
-<h2 className="text-lg font-semibold text-amber-700">イベント概要</h2>
-<p className="mt-2 text-sm text-gray-700 leading-relaxed">
-地域の飲食店が集まり、屋台・テイクアウト・限定メニューなどを楽しめるお祭りです。家族連れ・友達同士で気軽に回れる内容で、ライブや抽選会などのステージイベントも開催。
-</p>
-</section>
-
-
-{/* タイムテーブル */}
-<section className="bg-white rounded-xl p-4 shadow-sm">
-<h3 className="text-lg font-semibold text-amber-700">タイムテーブル</h3>
-<ul className="mt-3 space-y-3 text-sm text-gray-700">
-<li className="flex justify-between">
-<span>12:00</span>
-<span>開会式</span>
-</li>
-<li className="flex justify-between">
-<span>14:00</span>
-<span>ステージイベント（ライブ）</span>
-</li>
-<li className="flex justify-between">
-<span>16:00</span>
-<span>抽選会（豪華賞品あり）</span>
-</li>
-</ul>
-</section>
-
-
-{/* 特典 */}
-<section className="bg-white rounded-xl p-4 shadow-sm flex items-start gap-3">
-<div className="flex-1">
-<h3 className="text-lg font-semibold text-amber-700">特典</h3>
-<p className="mt-2 text-sm text-gray-700">来場者限定の割引券配布や先着100名のノベルティを用意しています。</p>
-</div>
-<div className="w-20 h-20 bg-amber-100 rounded-lg flex items-center justify-center">
-<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zM6.343 13.657A8 8 0 0112 4a8 8 0 015.657 9.657M12 14v6" />
+        {/* 特典 */}
+        <section className="bg-white rounded-xl p-4 shadow-sm flex items-start gap-3">
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold text-amber-700">特典</h3>
+            <p className="mt-2 text-sm text-gray-700">
+              来場者限定の割引券配布や先着100名のノベルティを用意しています。
+            </p>
+          </div>
+          <div className="w-20 h-20 bg-amber-100 rounded-lg flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-10 w-10 text-amber-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zM6.343 13.657A8 8 0 0112 4a8 8 0 015.657 9.657M12 14v6"
+              />
+            </svg>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }
